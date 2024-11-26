@@ -30,10 +30,8 @@
       "inline": [
         "sudo useradd -m ansibleadmin --shell /bin/bash",
         "sudo mkdir -p /home/ansibleadmin/.ssh  ",
-        "sudo chown -R ansibleadmin:ansibleadmin /home/ansibleadmin/.ssh",
+        "sudo chown -R ansibleadmin /home/ansibleadmin/.ssh",
         "sudo touch /home/ansibleadmin/.ssh/authorized_keys",
-        "sudo chown ansibleadmin:ansibleadmin /home/ansibleadmin/.ssh/authorized_keys",
-        "sudo chmod 600 /home/ansibleadmin/.ssh/authorized_keys",
         "sudo usermod -aG sudo ansibleadmin",
         "echo 'ansibleadmin ALL=(ALL) NOPASSWD: ALL' | sudo tee -a /etc/sudoers",
         "echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE/vpi6tYRRN2pDylHGl5RlH5IP6VkxthmjCNBAPt413' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys"
